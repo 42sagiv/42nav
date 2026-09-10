@@ -128,6 +128,29 @@
   .card h3{font-size:1.05rem;font-weight:700;margin-bottom:10px;}
   .card p{color:var(--text-dim);font-size:0.94rem;}
 
+  /* WORK */
+  .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  @media (max-width:700px){.work-grid{grid-template-columns:1fr;}}
+  .work-card{
+    background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:30px 28px;
+    display:flex;flex-direction:column;gap:14px;transition:border-color .15s, transform .15s;
+  }
+  .work-card:hover{border-color:rgba(61,214,198,0.4);transform:translateY(-2px);}
+  .work-tag{
+    align-self:flex-start;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;
+    font-weight:700;padding:4px 10px;border-radius:999px;
+  }
+  .work-tag.live{color:var(--accent);background:var(--accent-soft);border:1px solid rgba(61,214,198,0.35);}
+  .work-tag.dev{color:var(--text-dim);background:rgba(154,167,184,0.1);border:1px solid var(--border);}
+  .work-card h3{font-size:1.15rem;font-weight:700;}
+  .work-card p{color:var(--text-dim);font-size:0.94rem;flex:1;}
+  .work-link{
+    font-size:0.9rem;font-weight:700;color:var(--accent-2);text-decoration:none;
+    display:inline-flex;align-items:center;gap:6px;
+  }
+  .work-link:hover{color:var(--accent);}
+  .work-card .no-link{font-size:0.9rem;color:var(--text-dim);font-style:italic;}
+
   /* ABOUT */
   .about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:start;}
   @media (max-width:860px){.about-grid{grid-template-columns:1fr;}}
@@ -175,6 +198,7 @@
     <div class="logo"><span class="dot"></span>42NAV</div>
     <div class="navlinks navlinks-mobile-hide">
       <a href="#services">Services</a>
+      <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#approach">Approach</a>
       <a href="#contact">Contact</a>
@@ -241,6 +265,30 @@
         <div class="icon">✦</div>
         <h3>Technical Due Diligence</h3>
         <p>Independent architecture and operational review for investors, boards, and acquirers evaluating telecom or mobility technology assets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Work</div>
+      <h2>Things we've built, not just advised on.</h2>
+      <p>A sample of active projects — from open-source tools to fielded hardware.</p>
+    </div>
+    <div class="work-grid">
+      <div class="work-card">
+        <span class="work-tag live">Open Source</span>
+        <h3>Resume-Matcher</h3>
+        <p>AI-powered resume-to-job-description matcher — scores your fit, suggests edits, drafts cover letters, and exports ATS-safe resumes in multiple templates. Built with Claude.</p>
+        <a class="work-link" href="https://github.com/42sagiv/Resume-Matcher" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="work-card">
+        <span class="work-tag dev">In Development</span>
+        <h3>Merlin</h3>
+        <p>A man-portable private LTE/5G cellular network system for emergency response — deployable connectivity for first responders when infrastructure is down.</p>
+        <span class="no-link">Architecture &amp; pitch materials available on request</span>
       </div>
     </div>
   </div>
