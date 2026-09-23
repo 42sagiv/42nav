@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -122,3 +123,294 @@
   .card:hover{border-color:rgba(61,214,198,0.4);transform:translateY(-2px);}
   .card .icon{
     width:38px;height:38px;border-radius:10px;background:var(--accent-soft);
+    display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+    font-size:1.15rem;
+  }
+  .card h3{font-size:1.05rem;font-weight:700;margin-bottom:10px;}
+  .card p{color:var(--text-dim);font-size:0.94rem;}
+
+  /* WORK */
+  .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  @media (max-width:700px){.work-grid{grid-template-columns:1fr;}}
+  .work-card{
+    background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:30px 28px;
+    display:flex;flex-direction:column;gap:14px;transition:border-color .15s, transform .15s;
+  }
+  .work-card:hover{border-color:rgba(61,214,198,0.4);transform:translateY(-2px);}
+  .work-tag{
+    align-self:flex-start;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;
+    font-weight:700;padding:4px 10px;border-radius:999px;
+  }
+  .work-tag.live{color:var(--accent);background:var(--accent-soft);border:1px solid rgba(61,214,198,0.35);}
+  .work-tag.dev{color:var(--text-dim);background:rgba(154,167,184,0.1);border:1px solid var(--border);}
+  .work-card h3{font-size:1.15rem;font-weight:700;}
+  .work-card p{color:var(--text-dim);font-size:0.94rem;flex:1;}
+  .work-link{
+    font-size:0.9rem;font-weight:700;color:var(--accent-2);text-decoration:none;
+    display:inline-flex;align-items:center;gap:6px;
+  }
+  .work-link:hover{color:var(--accent);}
+  .work-card .no-link{font-size:0.9rem;color:var(--text-dim);font-style:italic;}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:start;}
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr;}}
+  .about-grid p{color:var(--text-dim);margin-bottom:16px;font-size:1.02rem;}
+  .about-grid p b{color:var(--text);}
+  .timeline{border-left:2px solid var(--border);padding-left:22px;display:flex;flex-direction:column;gap:22px;}
+  .tl-item .tl-role{font-weight:700;font-size:0.95rem;}
+  .tl-item .tl-org{color:var(--accent);font-size:0.88rem;font-weight:600;}
+  .tl-item .tl-date{color:var(--text-dim);font-size:0.8rem;margin-top:2px;}
+
+  /* APPROACH */
+  .approach{background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media (max-width:760px){.steps{grid-template-columns:1fr;}}
+  .step .num{
+    font-size:0.82rem;font-weight:800;color:var(--accent);letter-spacing:0.05em;margin-bottom:12px;
+  }
+  .step h3{font-size:1.05rem;font-weight:700;margin-bottom:10px;}
+  .step p{color:var(--text-dim);font-size:0.94rem;}
+
+  /* CONTACT */
+  .contact-panel{
+    background:linear-gradient(135deg, rgba(61,214,198,0.10), rgba(91,140,255,0.10));
+    border:1px solid rgba(61,214,198,0.3);
+    border-radius:20px;padding:52px 44px;
+    display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;
+  }
+  .contact-panel h2{margin-bottom:10px;}
+  .contact-panel p{color:var(--text-dim);max-width:440px;}
+  .contact-links{display:flex;flex-direction:column;gap:10px;font-size:0.98rem;}
+  .contact-links a{text-decoration:none;font-weight:600;}
+  .contact-links a:hover{color:var(--accent);}
+  .contact-links .label{color:var(--text-dim);font-weight:400;font-size:0.82rem;}
+
+  footer{border-top:1px solid var(--border);padding:36px 0;}
+  .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  footer .logo{font-size:1rem;}
+  footer .fine{color:var(--text-dim);font-size:0.85rem;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="logo"><span class="dot"></span>42NAV</div>
+    <div class="navlinks navlinks-mobile-hide">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="#contact">Get in touch</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Independent Advisory</span>
+    <h1>Telecom, mobility &amp; cloud advisory for operators who need to <span class="accent">move fast and get it right.</span></h1>
+    <p class="lede">42NAV helps network operators, hyperscalers, and mobility programs design and deliver cloud-native cores, private wireless networks, and AI-driven automation — from architecture through cutover.</p>
+    <div class="hero-ctas">
+      <a class="btn-primary" href="mailto:sagiv@42NAV.com">Start a conversation</a>
+      <a class="btn-secondary" href="#services">See what we do</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><b>$10B+</b><span>Program delivered on schedule</span></div>
+    <div class="stat"><b>$150M</b><span>Annual budget ownership</span></div>
+    <div class="stat"><b>250+</b><span>Global org led</span></div>
+    <div class="stat"><b>120</b><span>Granted patents</span></div>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Services</div>
+      <h2>Advisory across the stack — from packet core to production.</h2>
+      <p>Focused engagements built around your architecture, your timeline, and your team.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card">
+        <div class="icon">◆</div>
+        <h3>Network Architecture &amp; Transformation</h3>
+        <p>5G/4G core design (AMF, SMF, UPF, PCF, NRF, IMS, EPC), Open RAN strategy, and cloud-native network migration roadmaps.</p>
+      </div>
+      <div class="card">
+        <div class="icon">☁</div>
+        <h3>Cloud &amp; Edge Strategy</h3>
+        <p>Azure, AWS, and OpenStack architecture; Kubernetes-based network functions; mobile edge compute design for latency-sensitive workloads.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⚙</div>
+        <h3>Automation &amp; AI-Driven Operations</h3>
+        <p>Day 0/1/2 automation frameworks, AIOps, observability pipelines (OpenTelemetry, streaming telemetry), and agentic workflow orchestration.</p>
+      </div>
+      <div class="card">
+        <div class="icon">▲</div>
+        <h3>Private Network Deployment</h3>
+        <p>Private LTE/5G design and deployment for industrial, defense, and mission-critical use cases — from RF planning to field operations.</p>
+      </div>
+      <div class="card">
+        <div class="icon">◈</div>
+        <h3>Program &amp; Delivery Leadership</h3>
+        <p>Large-scale program governance, vendor and supplier management, and architecture advisory board leadership for complex, multi-year builds.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✦</div>
+        <h3>Technical Due Diligence</h3>
+        <p>Independent architecture and operational review for investors, boards, and acquirers evaluating telecom or mobility technology assets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Work</div>
+      <h2>Things we've built, not just advised on.</h2>
+      <p>A sample of active projects — from open-source tools to fielded hardware.</p>
+    </div>
+    <div class="work-grid">
+      <div class="work-card">
+        <span class="work-tag live">Open Source</span>
+        <h3>Resume-Matcher</h3>
+        <p>AI-powered resume-to-job-description matcher — scores your fit, suggests edits, drafts cover letters, and exports ATS-safe resumes in multiple templates. Built with Claude.</p>
+        <a class="work-link" href="https://github.com/42sagiv/Resume-Matcher" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="work-card">
+        <span class="work-tag live">Open Source</span>
+        <h3>Cloudlet</h3>
+        <p>Turn every device on your network into one distributed supercomputer — phones, laptops, and desktops each lend spare CPU cycles to a shared pool, with automatic benchmarking and ranking across the swarm.</p>
+        <a class="work-link" href="https://github.com/42sagiv/cloudlet" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="work-card">
+        <span class="work-tag dev">In Development</span>
+        <h3>Merlin</h3>
+        <p>A man-portable private LTE/5G cellular network system for emergency response — deployable connectivity for first responders when infrastructure is down.</p>
+        <span class="no-link">Architecture &amp; pitch materials available on request</span>
+      </div>
+      <div class="work-card">
+        <span class="work-tag dev">In Development</span>
+        <h3>Intent</h3>
+        <p>A natural-language Photoshop plugin — type what you want done to an image ("remove the background," "crop to Instagram square") and it translates the request into Photoshop operations via a constrained, LLM-driven action plan, with a confirmation step before anything runs.</p>
+        <a class="work-link" href="https://github.com/42sagiv/photoshop-intent-plugin" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="section-head" style="margin-bottom:28px;">
+        <div class="kicker">About</div>
+        <h2>Built on two decades inside the networks we now advise on.</h2>
+      </div>
+      <p>42NAV is led by <b>Sagiv Draznin</b>, a telecom and cloud executive who has spent over twenty years building and operating the networks that carry the world's traffic — from carrier packet cores to hyperscale cloud platforms.</p>
+      <p>He currently serves as <b>Head of Innovation and Automation at Nokia</b>, and previously held senior roles including <b>Head of Product for Azure for Operators at Microsoft</b>, <b>SVP of Global Delivery &amp; Customer Success at Rakuten Symphony</b>, and <b>SVP of Operations &amp; Architecture at Rakuten Mobile Japan</b> — where he helped stand up one of the world's first fully cloud-native mobile networks.</p>
+      <p>Earlier, at Verizon, he co-designed the <b>AWS Wavelength mobile edge compute solution</b> with AWS, deployed across 150 edge locations. He holds <b>120 granted patents</b> in mobility, cloud, and observability, and chaired the <b>Core Network Project Group at Telecom Infra Project (TIP)</b>, where he designed the automation architecture for Magma.</p>
+      <p>42NAV brings that same depth to independent engagements — practical, hands-on, and grounded in what actually works in production.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-role">Head of Innovation and Automation</div>
+        <div class="tl-org">Nokia</div>
+        <div class="tl-date">Oct 2024 — Present</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-role">SVP Global Delivery &amp; Customer Success</div>
+        <div class="tl-org">Rakuten Symphony</div>
+        <div class="tl-date">Mar 2023 — Oct 2024</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-role">Head of Product, Azure for Operators</div>
+        <div class="tl-org">Microsoft</div>
+        <div class="tl-date">Mar 2021 — Mar 2023</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-role">SVP Operations &amp; Architecture</div>
+        <div class="tl-org">Rakuten Mobile, Japan</div>
+        <div class="tl-date">Aug 2018 — Feb 2021</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-role">Director, Wireless Packet Core</div>
+        <div class="tl-org">Verizon Communications</div>
+        <div class="tl-date">Jan 2013 — Aug 2018</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="approach" id="approach">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Approach</div>
+      <h2>Three phases. No hand-waving.</h2>
+      <p>Every engagement is scoped around a clear problem and a concrete deliverable.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">01 / ASSESS</div>
+        <h3>Architecture &amp; operational review</h3>
+        <p>We map your current network, cloud footprint, and operational model against where you need to be — and where the real risk lives.</p>
+      </div>
+      <div class="step">
+        <div class="num">02 / DESIGN</div>
+        <h3>Roadmap &amp; reference architecture</h3>
+        <p>A phased, de-risked plan — with the reference architecture, vendor evaluation, and automation strategy your team can actually execute.</p>
+      </div>
+      <div class="step">
+        <div class="num">03 / DELIVER</div>
+        <h3>Hands-on execution support</h3>
+        <p>We stay through implementation — advising delivery teams, unblocking decisions, and reviewing progress against the plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-panel">
+      <div>
+        <h2>Let's talk about your network.</h2>
+        <p>Whether it's a packet core migration, a private network build, or a second opinion before a big decision — reach out directly.</p>
+      </div>
+      <div class="contact-links">
+        <div>
+          <div class="label">Email</div>
+          <a href="mailto:sagiv@42NAV.com">sagiv@42NAV.com</a>
+        </div>
+        <div>
+          <div class="label">Phone</div>
+          <a href="tel:+19257659633">925-765-9633</a>
+        </div>
+        <div>
+          <div class="label">LinkedIn</div>
+          <a href="https://linkedin.com/in/sagivdraznin" target="_blank" rel="noopener">linkedin.com/in/sagivdraznin</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <div class="logo"><span class="dot"></span>42NAV</div>
+    <div class="fine">© <span id="year"></span> 42NAV. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
